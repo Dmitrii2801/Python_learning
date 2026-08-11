@@ -19,7 +19,7 @@ for i in range(decades):
 
 print(x); # вывод массива x с десятичными знаками числа number
 print(x_check); # вывод массива x_check со всеми десятичными знаками, которые равны числу check_number
-x_check_len = len(x_check);
+x_check_len = len(x_check); # количество повторений цифры check_number в числе number
 
 # Обработка условия (поиск количества повторений цифры check_number в числе number)
 match x_check_len:
