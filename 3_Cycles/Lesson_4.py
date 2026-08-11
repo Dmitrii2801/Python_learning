@@ -7,7 +7,7 @@ n = int(input('Введите количество элементов масси
 x = [0]*n; # массив из нулей
 
 for i in range(n):
-    x[i] = random.randint(1,15);
+    x[i] = random.randint(1,100);
 
 x_max = max(x); # значение максимального элемента массива
 index_max = x.index(x_max); # индекс максимального элемента массива
@@ -23,10 +23,9 @@ print('Минимальный элемент. Значение - ', x_min, '. И
 index_max_new = int(input('Введите индекс элемента массива, куда переместить максимальный элемент: '));
 index_min_new = int(input('Введите индекс элемента массива, куда переместить минимальный элемент: '));
 
-for j in range(n):
-    if (j == index_max_new):
-        x[index_max_new], x_max = x_max, x[index_max_new];
-    if (j == index_min_new):
-        x[index_min_new], x_min = x_min, x[index_min_new];
-        
+# Перестановка минимального и максимального элементов массива на новые места
+x[index_max_new], x[index_max] = x[index_max], x[index_max_new];
+x[index_min_new], x[index_min] = x[index_min], x[index_min_new];
+
+# Вывод результирующего массива
 print('Результирующий массив: ', x);
