@@ -1,7 +1,7 @@
 # Обращение к индексам строки
 
 language = 'Python';
-length = len(str(language));
+length = len(language);
 
 for i in range(length):
     print(i, '-ый символ: ', language[i], sep='');
