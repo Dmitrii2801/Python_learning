@@ -14,13 +14,20 @@ for i in range(n): # заполнение массива
 
 for k in range(n): # проверка на простоту и удаление простых чисел из массива
     is_simple = True;
-    for j in range(2, math.isqrt(x_initial[k])):
+    if(x_initial[k] < 2):
+        continue;
+    for j in range(2, math.isqrt(x_initial[k])+1):
         if(x_initial[k]%j==0):
             is_simple = False;
             break;
     if(is_simple == True):
         x_simple.append(x_initial[k]);
         x_result[k] = [];
+
+# Удаление простых чисел из массива
+for m in x_result[:]:
+    if m == []:
+        x_result.remove(m);
 
 print('Исходный массив: ', x_initial);
 print('Результирующий массив (без простых чисел): ', x_result);
