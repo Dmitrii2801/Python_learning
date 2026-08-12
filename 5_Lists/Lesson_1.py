@@ -11,9 +11,8 @@ for i in range(length_l):
     print(i, l[i]);
 
 # Вывод индекса конкретного элемента в списке
-element = input('Введите элемент, который требуется найти в списке: ');
-for j in range(length_l):
-    if(element == l[j]):
-        print(f'Индекс элемента {element} в списке {l} равен {j}')
-    else:
-        print(f'Элемент {element} не найден в списке {l}')
+print(f'Индекс элемента string1 в списке l равен {l.index('string1')}');
+print(f'Индекс элемента 12 в списке l равен {l.index(12)}');
+print(f'Индекс элемента 14.3 в списке l равен {l.index(14.3)}');
+print(f'Индекс элемента string2 в списке l равен {l.index('string2')}');
+print(f'Индекс элемента True в списке l равен {l.index(True)}');
