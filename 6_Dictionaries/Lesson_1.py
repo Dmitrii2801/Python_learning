@@ -12,6 +12,8 @@ research_paper = {
     'pages': 6,
 }
 
+print(f'Тип research_paper: {type(research_paper)}'); # вывод типа данных "dict" (dictionary - словарь)
+
 print(f'Информация о найденной публикации: {research_paper}');
 
 # Вывести характеристику объекта по ключ-значению
