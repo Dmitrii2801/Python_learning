@@ -27,6 +27,6 @@ t_est = np.arange(t0,t_stop-dt_est,dt_est);
 
 # Построение графиков
 
-plt.plot(t, Coil);
-plt.grid()
-plt.show()
+# plt.plot(t, Coil);
+# plt.grid()
+# plt.show()
