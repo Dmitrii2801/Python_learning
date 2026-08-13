@@ -1,12 +1,14 @@
 # Работа с csv-файлами. Чтение данных из файла и обработка этих данных
 
-import csv
+import pandas as pd # библиотека в том числе для работы с таблицами
 
-with open('data/est_A.csv') as file:
-    for line in file:
-        a = line;
+file_path = '9_Files\data\est_A.csv'; # путь к файлу
 
-# print(a);
+df = pd.read_csv(file_path); # считать данные из csv-файла, расположенного по заданному пути 
+
+data = df[0].tolist(); # перенести данные из первого столбца (нумерация с 0) в список под названием data
+
+print(data);
 
 
 
