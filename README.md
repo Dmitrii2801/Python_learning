@@ -1,2 +1,2 @@
-# Python_lessons
+# Python_learning
 Изучение языка программирования Python
