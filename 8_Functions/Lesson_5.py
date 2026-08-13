@@ -13,6 +13,6 @@ def byte_count(type, information):
 address_type = input('Введите тип запрашиваемого адреса (MAC-адрес / ip-адрес): ');
 address = input('Введите запрашиваемый адрес: ');
 
-byte_list = byte_count(address_type, address);
+byte_tuple = tuple(byte_count(address_type, address)); # преобразование списка байтов в кортеж
 
-print(f'Отдельные байты информации в {address_type}е: {byte_list}');
+print(f'Отдельные байты информации в {address_type}е: {byte_tuple}');

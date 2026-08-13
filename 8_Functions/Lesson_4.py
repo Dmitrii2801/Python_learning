@@ -5,7 +5,8 @@ import random
 
 # Функция для получения ряда квадратов нечетных чисел из списка с n-элементами
 def row_odd_squares(list): # входной аргумент функции - список с числами
-    result = [value**2 for value in list if value % 2 != 0];
+    result = [value**2 for value in list if value % 2 != 0]; # если число value из списка является нечетным,
+    # вычислить его квадрат и вернуть квадрат этого числа
     return result;
 
 quantity = int(input('Введите количество элементов в списке натуральных чисел: '));
