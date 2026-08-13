@@ -2,11 +2,11 @@
 # Создать функцию, принимающую тип информации (MAC-адрес или ip-адрес). В зависимости от типа
 # информации и разделителя между байтами адреса функция записывает отдельные байты информации в кортеж
 
-def byte_count(type, information):
+def byte_count(type, address):
     match type:
         case 'MAC-адрес': separator='-';
         case 'ip-адрес': separator='.';
-    byte_list = information.split(separator);
+    byte_list = address.split(separator);
     return byte_list;
 
 # Ввод типа адреса
