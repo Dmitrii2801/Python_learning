@@ -27,8 +27,8 @@ def count_string_letters(sentence:str, symbol:str):
                 if(flag_letter == True): # и если до этого символ не встречался в этом слове,
                     words_with_symbol.append(list_sentence[i_words]); # добавить слово в список words_with_symbol
                     flag_letter = False; # если символ встретится в слове еще раз, больше не добавлять это слово
-        result_words.append(''.join(letters));
-        result_sentence = ' '.join(result_words);
+        result_words.append(''.join(letters)); # заполнение списка слов с заменой символа symbol на символ *
+        result_sentence = ' '.join(result_words); # результирующая строка с заменой символа symbol на символ *
         flag_letter = True; # вернуть индикатор в True (для других слов)
     
     # Вывод данных
