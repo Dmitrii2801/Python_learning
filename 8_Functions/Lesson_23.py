@@ -28,6 +28,7 @@ def rock_scissors_paper(rounds:int):
         elif((user_try == 'камень' and pc_try == 'ножницы') or (user_try == 'ножницы' and pc_try == 'бумага') or (user_try == 'бумага' and pc_try == 'камень')):
             print(f'Раунд {rounds} за вами!');
             user_wins += 1;
+            rounds += 1;
         
         if(user_wins == 3):
             print('Вы выиграли!');
