@@ -36,5 +36,12 @@ def rock_scissors_paper(rounds:int):
         elif(pc_wins == 3):
             print('Выиграл компьютер!');
             break;
+        
+        operation = input('Хотите ли вы продолжить игру (Да / Нет): ');
+        if (operation == 'Да'):
+            print('Выход из игры');
+            break;
+        elif(operation == 'Нет'):
+            continue;
 
 rock_scissors_paper(rounds);
