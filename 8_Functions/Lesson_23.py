@@ -1,17 +1,19 @@
 # Написать игру "Камень, ножницы, бумага". Компьютер случайным образом выбирает один из
-# вариантов. Пользователь
+# вариантов. Пользователь выбирает один из вариантов. В соответствии с правилами игры один из игроков
+# либо получает балл, либо играет в ничью. Игра проводится либо до 3 побед одного из игроков, либо до
+# принудительного выхода из игры по желанию пользователя
 
 import random
 
 rounds = 1; # номер раунда
 game_list = ['камень', 'ножницы', 'бумага'];
 
+# Количество выигрышей
+pc_wins = 0; # компьютера
+user_wins = 0; # пользователя
 
-def rock_scissors_paper(rounds:int):
+def rock_scissors_paper(pc_wins:int, user_wins:int, rounds:int):
     while(True):
-        # Количество выигрышей
-        pc_wins = 0; # компьютера
-        user_wins = 0; # пользователя
         
         pc_try = random.sample(game_list,1); # выбор варианта компьютером
         user_try = [];
@@ -21,11 +23,11 @@ def rock_scissors_paper(rounds:int):
             print(f'Раунд {rounds} в ничью');
             rounds += 1;
             continue;
-        elif(((pc_try == 'камень') and (user_try == 'ножницы')) or ((pc_try == 'ножницы') and (user_try == 'бумага')) or ((pc_try == 'бумага') and (user_try == 'камень'))):
+        elif(((pc_try == ['камень']) and (user_try == ['ножницы'])) or ((pc_try == ['ножницы']) and (user_try == ['бумага'])) or ((pc_try == ['бумага']) and (user_try == ['камень']))):
             print(f'Раунд {rounds} за компьютером!');
             pc_wins += 1;
             rounds += 1;
-        elif((user_try == 'камень' and pc_try == 'ножницы') or (user_try == 'ножницы' and pc_try == 'бумага') or (user_try == 'бумага' and pc_try == 'камень')):
+        elif((user_try == ['камень'] and pc_try == ['ножницы']) or (user_try == ['ножницы'] and pc_try == ['бумага']) or (user_try == ['бумага'] and pc_try == ['камень'])):
             print(f'Раунд {rounds} за вами!');
             user_wins += 1;
             rounds += 1;
@@ -39,9 +41,9 @@ def rock_scissors_paper(rounds:int):
         
         operation = input('Хотите ли вы продолжить игру (Да / Нет): ');
         if (operation == 'Да'):
+            continue;
+        elif(operation == 'Нет'):
             print('Выход из игры');
             break;
-        elif(operation == 'Нет'):
-            continue;
 
-rock_scissors_paper(rounds);
+rock_scissors_paper(pc_wins, user_wins, rounds);
