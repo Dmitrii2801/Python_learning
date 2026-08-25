@@ -10,8 +10,16 @@ import matplotlib.pyplot as plt
 
 # Генерация данных для графиков
 x = np.arange(1, 6);
-y1 = ['1', '4', '9', '16', '25'];
+y1 = ['1', '-4', '9', '16', '25'];
 y2 = ['2', '3', '5', '7', '11'];
+
+y1_float = [];
+y2_float = [];
+for i in range(len(y1)):
+    y1_float.append(float(y1[i]));
+    
+for j in range(len(y2)):
+    y2_float.append(float(y2[j]));
 
 # Создание области под графики
 fig, ax = plt.subplots(nrows=2, ncols=2, figsize=(10,8)) # nrows - количество строк
@@ -25,15 +33,15 @@ fig, ax = plt.subplots(nrows=2, ncols=2, figsize=(10,8)) # nrows - количе�
 """
 
 # 1. Верхний левый график (строка 0, столбец 0)
-ax[0, 0].plot(x, y1, color='blue')
+ax[0, 0].plot(x, y1_float, color='blue')
 ax[0, 0].set_title('Линейный график')
 
 # 2. Верхний правый график (строка 0, столбец 1)
-ax[0, 1].scatter(x, y2, color='red')
+ax[0, 1].scatter(x, y2_float, color='red')
 ax[0, 1].set_title('Диаграмма рассеяния')
 
 # 3. Нижний левый график (строка 1, столбец 0)
-ax[1, 0].bar(x, y1, color='green')
+ax[1, 0].bar(x, y1_float, color='green')
 ax[1, 0].set_title('Столбчатая диаграмма')
 
 # 4. Нижний правый график (строка 1, столбец 1)
