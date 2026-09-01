@@ -20,7 +20,7 @@ def temperature_conv(mode:int, temp_value:float): # входные аргуме�
 converse_mode = int(input('Введите режим преобразования температуры (1 / 2): '));
 temperature_value = float(input('Введите значение температуры: '));
 
-# Примененение функции для преобразования температуры
+# Применение функции для преобразования температуры
 conversed_temperature_value = temperature_conv(converse_mode, temperature_value);
 
 # Вывод данных
